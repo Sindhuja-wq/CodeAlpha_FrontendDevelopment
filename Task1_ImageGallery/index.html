@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Responsive image gallery with categories and lightbox navigation.">
+  <title>Image Gallery | CodeAlpha</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <a class="brand" href="#">Frame<span>Gallery</span></a>
+      <span class="tag">CodeAlpha Task 1</span>
+    </nav>
+    <div class="hero-content">
+      <p class="eyebrow">IMAGE GALLERY</p>
+      <h1>Moments worth<br><span>remembering.</span></h1>
+      <p>Explore a responsive gallery with categories, hover effects and a smooth lightbox experience.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="toolbar">
+      <div class="filters" role="group" aria-label="Gallery filters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="nature">Nature</button>
+        <button class="filter" data-filter="city">City</button>
+        <button class="filter" data-filter="travel">Travel</button>
+      </div>
+      <span id="count">8 images</span>
+    </div>
+
+    <section class="gallery" id="gallery">
+      <article class="card" data-category="nature" data-title="Misty Mountain" data-image="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=85">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80" alt="Misty mountain landscape" loading="lazy">
+        <div class="caption"><span>Nature</span><h2>Misty Mountain</h2></div>
+      </article>
+      <article class="card" data-category="city" data-title="City Lights" data-image="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1400&q=85">
+        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=900&q=80" alt="City skyline at dusk" loading="lazy">
+        <div class="caption"><span>City</span><h2>City Lights</h2></div>
+      </article>
+      <article class="card" data-category="travel" data-title="Golden Coast" data-image="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=85">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="Tropical beach" loading="lazy">
+        <div class="caption"><span>Travel</span><h2>Golden Coast</h2></div>
+      </article>
+      <article class="card" data-category="nature" data-title="Forest Trail" data-image="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1400&q=85">
+        <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=80" alt="Forest trail" loading="lazy">
+        <div class="caption"><span>Nature</span><h2>Forest Trail</h2></div>
+      </article>
+      <article class="card" data-category="city" data-title="Urban Geometry" data-image="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=1400&q=85">
+        <img src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=900&q=80" alt="Modern city buildings" loading="lazy">
+        <div class="caption"><span>City</span><h2>Urban Geometry</h2></div>
+      </article>
+      <article class="card" data-category="travel" data-title="Desert Road" data-image="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&fit=crop&w=1400&q=85">
+        <img src="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&fit=crop&w=900&q=80" alt="Road through desert" loading="lazy">
+        <div class="caption"><span>Travel</span><h2>Desert Road</h2></div>
+      </article>
+      <article class="card" data-category="nature" data-title="Calm Lake" data-image="https://images.unsplash.com/photo-1439853949127-fa647821eba0?auto=format&fit=crop&w=1400&q=85">
+        <img src="https://images.unsplash.com/photo-1439853949127-fa647821eba0?auto=format&fit=crop&w=900&q=80" alt="Calm lake and mountains" loading="lazy">
+        <div class="caption"><span>Nature</span><h2>Calm Lake</h2></div>
+      </article>
+      <article class="card" data-category="travel" data-title="Coastal Escape" data-image="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1400&q=85">
+        <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80" alt="Coastal landscape" loading="lazy">
+        <div class="caption"><span>Travel</span><h2>Coastal Escape</h2></div>
+      </article>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="close" id="close" aria-label="Close image viewer">&times;</button>
+    <button class="nav-btn prev" id="prev" aria-label="Previous image">&#10094;</button>
+    <figure>
+      <img id="lightboxImage" src="" alt="">
+      <figcaption id="lightboxTitle"></figcaption>
+    </figure>
+    <button class="nav-btn next" id="next" aria-label="Next image">&#10095;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
